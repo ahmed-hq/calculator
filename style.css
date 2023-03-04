@@ -1,4 +1,41 @@
 body{
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    color: #FFFFFC;
+    background-color: #202030;
+}
+
+button{
+    background-color: #32324B;
+    color: #FFFFFC;
+    border: none;
+    width: 81.5px;
+    height: 75px;
+}
+
+.calculator-section {
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    
+}
+
+.screen-wrapper{
+    background-color: #32324B;
+    width: 350px;
+    margin-bottom: 8px;
+}
+
+.buttons-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
 }
