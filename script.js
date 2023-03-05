@@ -34,7 +34,7 @@ let delButton = document.querySelector(".del-button");
 let equal = document.querySelector(".equal-button");
 
 clearButton.addEventListener("click", clear);
-
+delButton.addEventListener('click',() => delNum(firstNumArr))
 numOne.addEventListener("click", () => {
   inputNum(1);
 });
@@ -74,6 +74,12 @@ function inputNum(num) {
   firstNumArr.push(num);
   resetFirstNum();
 }
+
+function delNum(arr) {
+    arr.splice(4,4);
+    arr.splice(-1);
+    resetFirstNum();
+  }
 
 function clear() {
   firstNumArr = [];
