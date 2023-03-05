@@ -1,41 +1,97 @@
-body{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    color: #FFFFFC;
-    background-color: #202030;
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #fffffc;
+  background-color: #202030;
 }
 
-button{
-    background-color: #32324B;
-    color: #FFFFFC;
-    border: none;
-    width: 81.5px;
-    height: 75px;
+button {
+  background-color: #32324b;
+  color: #fffffc;
+  border: none;
+  width: 81.5px;
+  height: 75px;
 }
 
 .calculator-section {
-    height: 98vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .calculator-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+
+.screen-wrapper {
+  background-color: #32324b;
+  height: 150px;
+  width: 350px;
+  margin-bottom: 8px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.operation-buttons_wrapper {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.operation-button {
+  background-color: #47476b;
+}
+
+.bottom-buttons_wrapper {
+  display: flex;
+  flex-grow: 1;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.numbers-wrapper {
+  display: flex;
+  gap: 7.7px;
+  flex-wrap: wrap;
+  max-width: 260px;
+  /* gap: 8px; */
+}
+
+.num-button {
+    font-size: 32px;
+}
+
+#zero-button {
+    width: 170.8px;
+}
+
+.controls-buttons {
     display: flex;
     flex-direction: column;
-    max-width: 350px;
-    
-}
-
-.screen-wrapper{
-    background-color: #32324B;
-    width: 350px;
-    margin-bottom: 8px;
-}
-
-.buttons-wrapper{
-    display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 8px;
+}
+
+.ce-button{
+    font-size: 24px;
+    background-color: #E94F37;
+}
+
+.del-button{
+    font-size: 24px;
+    background-color: #EE7663;
+}
+
+.equal-button {
+  height: 157.1px;
+  background-color: #fffffc;
+  color: #32324b;
+  font-size: 36px;
 }
