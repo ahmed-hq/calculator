@@ -1,3 +1,6 @@
+// issues
+// make mouse point to the buttons not highlight it as text
+
 let firstNumArr = [];
 let firstNum = firstNumArr.join("");
 let secNumArr = [];
@@ -9,6 +12,10 @@ let resultText = document.querySelector(".result");
 let firstNumText = document.querySelector(".first-num");
 let secNumText = document.querySelector(".sec-num");
 let operatorText = document.querySelector(".operator");
+let add = document.querySelector(".adding-operator");
+let subtract = document.querySelector(".subtract-operator");
+let multiply = document.querySelector(".multiply-operator");
+let divide = document.querySelector(".divide-operator");
 let numOne = document.getElementById("num-1");
 let numTwo = document.querySelector("#num-2");
 let numThree = document.querySelector("#num-3");
@@ -18,10 +25,14 @@ let numSix = document.querySelector("#num-6");
 let numSeven = document.querySelector("#num-7");
 let numEight = document.querySelector("#num-8");
 let numNine = document.querySelector("#num-9");
-let clearButton = document.querySelector(".ce-button")
+let zero = document.querySelector("#zero-button");
+let decimal = document.querySelector("#decimal");
+let clearButton = document.querySelector(".ce-button");
+let delButton = document.querySelector(".del-button");
+let equal = document.querySelector(".equal-button");
 
-clearButton.addEventListener("click", clear)
 
+clearButton.addEventListener("click", clear);
 numOne.addEventListener("click", () => {
   inputNum(1);
 });
@@ -49,25 +60,23 @@ numEight.addEventListener("click", () => {
 numNine.addEventListener("click", () => {
   inputNum(9);
 });
+decimal.addEventListener('click',() => {inputNum('.')})
 
-
-function resetFirstNum(){
-    firstNumText.innerText = `${firstNumArr.join("")}`;
+function resetFirstNum() {
+  firstNumText.innerText = `${firstNumArr.join("")}`;
 }
 
 function inputNum(num) {
   firstNumArr.push(num);
-  resetFirstNum()
+  resetFirstNum();
 }
 
 function clear() {
   firstNumArr = [];
   secNumArr = [];
   result = 0;
-  resetFirstNum()
-  
+  resetFirstNum();
 }
-
 
 // .innerText = `${operator}`;
 // .innerText = `${secNum}`;
