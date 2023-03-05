@@ -63,6 +63,10 @@ p {
     color: #fffffc;
 }
 
+.operator {
+    display: block;
+}
+
 .result-wrapper {
     display: flex;
   margin-top: auto;
@@ -103,7 +107,16 @@ p {
 }
 
 .num-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   font-size: 32px;
+  background-color: #32324b;
+  color: #fffffc;
+  border: none;
+  width: 81.5px;
+  height: 75px;
+  font-family: "Montserrat", sans-serif;
 }
 
 #zero-button {
