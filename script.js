@@ -8,6 +8,8 @@ let secNum = Number(secNumArr.join(""));
 let operator;
 let result = 0;
 
+
+
 let resultText = document.querySelector(".result");
 let firstNumText = document.querySelector(".first-num");
 let secNumText = document.querySelector(".sec-num");
@@ -31,8 +33,8 @@ let clearButton = document.querySelector(".ce-button");
 let delButton = document.querySelector(".del-button");
 let equal = document.querySelector(".equal-button");
 
-
 clearButton.addEventListener("click", clear);
+
 numOne.addEventListener("click", () => {
   inputNum(1);
 });
@@ -60,10 +62,12 @@ numEight.addEventListener("click", () => {
 numNine.addEventListener("click", () => {
   inputNum(9);
 });
-decimal.addEventListener('click',() => {inputNum('.')})
+decimal.addEventListener("click", () => {
+  inputNum(".");
+});
 
 function resetFirstNum() {
-  firstNumText.innerText = `${firstNumArr.join("")}`;
+  firstNumText.innerText = `${firstNumArr.slice(0,4).join("")}`;
 }
 
 function inputNum(num) {
