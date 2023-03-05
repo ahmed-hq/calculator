@@ -76,7 +76,7 @@ function inputNum(num) {
 }
 
 function delNum(arr) {
-    arr.splice(4,4);
+    arr.splice(4,Infinity);
     arr.splice(-1);
     resetFirstNum();
   }
