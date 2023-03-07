@@ -100,7 +100,7 @@
 let firstNum = "";
 let secNum = "";
 let operator = null;
-let resetScreen = false;
+let shouldResetScreen = false;
 
 const operatorBtns = document.querySelectorAll("[data-operator]");
 const numberBtns = document.querySelectorAll("[data-number]");
@@ -120,6 +120,10 @@ decimal.addEventListener("click", appendPoint);
 numberBtns.forEach((btn) =>
   btn.addEventListener("click", () => appendNumber(btn.textContent))
 );
+operatorBtns.forEach(
+  (btn) => btn.addEventListener("click",
+  () => setOperation(btn.textContent)
+));
 
 function clear() {
   firstNum = "";
@@ -132,26 +136,33 @@ function clear() {
 function deleteNum() {
   currentOperationScreen.textContent = currentOperationScreen.textContent
     .toString()
-    .slice(-1);
+    .slice(0,-1);
 }
 
 function appendNumber(num) {
-  if (resetScreen || currentOperationScreen.textContent === "0") resetScreen();
+  if (shouldResetScreen || currentOperationScreen.textContent === "0") resetScreen();
   currentOperationScreen.textContent += num;
 }
 
 function appendPoint() {
-  if (resetScreen) resetScreen();
+  if (shouldResetScreen) resetScreen();
   if (currentOperationScreen.textContent === "")
     currentOperationScreen.textContent = "0";
-  //   CAN'T UNDERSTAND THIS
-  //   if (currentOperationScreen.textContent.includes('.')) return
-  //   currentOperationScreen.textContent += '.'
+    if (currentOperationScreen.textContent.includes('.')) return
+    currentOperationScreen.textContent += '.'
+}
+
+function setOperation(operatorSign) {
+  if (operator !== null) evaluate();
+  firstNum = currentOperationScreen.textContent;
+  operator = operatorSign;
+  lastOperationScreen.textContent = `${firstNum} ${operator}`;
+  shouldResetScreen = true;
 }
 
 function resetScreen() {
   currentOperationScreen.textContent = "";
-  resetScreen = false;
+  shouldResetScreen = false;
 }
 
 function add(a, b) {
@@ -167,10 +178,10 @@ function divide(a, b) {
   return a / b;
 }
 
-function operate(operator, a, b) {
+function operate(operate, a, b) {
   a = Number(a);
   b = Number(b);
-  switch (operator) {
+  switch (operate) {
     case "+":
       return add(a, b);
     case "-":
@@ -190,7 +201,7 @@ function roundResult(num) {
 }
 
 function evaluate() {
-  if (operator === null || resetScreen) return;
+  if (operator === null || shouldResetScreen) return;
   if (operator === "÷" && currentOperationScreen.textContent === "0") {
     alert("Math Error - You Can't Divide by Zero!");
     return;
