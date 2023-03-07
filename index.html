@@ -24,7 +24,10 @@
             <div class="calculator-wrapper">
               <div class="screen-wrapper">
                 <div class="screen">
-                  <div class="operation-wrapper">
+                  <div class="screen-last" id="lastOperationScreen"></div>
+                  <div class="screen-current" id="currentOperationScreen">0</div>
+
+                  <!-- <div class="operation-wrapper">
                     <div class="first-num_wrapper">
                       <p class="first-num"></p>
                     </div>
@@ -37,28 +40,28 @@
                   </div>
                   <div class="result-wrapper">
                     <p class="result">0</p>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <div class="buttons-wrapper">
                 <div class="operation-buttons_wrapper">
-                  <button class="operation-button adding-operator">+</button>
-                  <button class="operation-button subtract-operator">-</button>
-                  <button class="operation-button multiply-operator">×</button>
-                  <button class="operation-button divide-operator">÷</button>
+                  <button class="operation-button adding-operator" data-operator>+</button>
+                  <button class="operation-button subtract-operator" data-operator>-</button>
+                  <button class="operation-button multiply-operator" data-operator>×</button>
+                  <button class="operation-button divide-operator" data-operator>÷</button>
                 </div>
                 <div class="bottom-buttons_wrapper">
                   <div class="numbers-wrapper">
-                    <div class="num-button" id="num-7">7</div>
-                    <div class="num-button" id="num-8">8</div>
-                    <div class="num-button" id="num-9">9</div>
-                    <div class="num-button" id="num-4">4</div>
-                    <div class="num-button" id="num-5">5</div>
-                    <div class="num-button" id="num-6">6</div>
-                    <div class="num-button" id="num-1">1</div>
-                    <div class="num-button" id="num-2">2</div>
-                    <div class="num-button" id="num-3">3</div>
-                    <div class="num-button" id="zero-button">0</div>
+                    <div class="num-button" id="num-7" data-number>7</div>
+                    <div class="num-button" id="num-8" data-number>8</div>
+                    <div class="num-button" id="num-9" data-number>9</div>
+                    <div class="num-button" id="num-4" data-number>4</div>
+                    <div class="num-button" id="num-5" data-number>5</div>
+                    <div class="num-button" id="num-6" data-number>6</div>
+                    <div class="num-button" id="num-1" data-number>1</div>
+                    <div class="num-button" id="num-2" data-number>2</div>
+                    <div class="num-button" id="num-3" data-number>3</div>
+                    <div class="num-button" id="zero-button" data-number>0</div>
                     <div class="num-button" id="decimal">.</div>
                   </div>
                   <div class="controls-buttons">
