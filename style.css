@@ -19,6 +19,13 @@ button {
   font-family: "Montserrat", sans-serif;
 }
 
+button:hover {
+  opacity: 85%;
+}
+button:active {
+  opacity: 65%;
+}
+
 p {
   margin: 0px;
 }
@@ -58,8 +65,8 @@ p {
   font-size: 24px;
 }
 
-.screen-current{
-  font-size:40px;
+.screen-current {
+  font-size: 40px;
 }
 
 .operation-wrapper {
@@ -126,6 +133,12 @@ p {
   width: 81.5px;
   height: 75px;
   font-family: "Montserrat", sans-serif;
+}
+.num-button:hover {
+  opacity: 85%;
+}
+.num-button:active {
+  opacity: 65%;
 }
 
 #zero-button {
